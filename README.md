@@ -31,7 +31,7 @@ We use the ["Neighbor2Neighbor"](https://github.com/TaoHuang2018/Neighbor2Neighb
 
 * For synthetic noise, run ``TTAD_syn.py`` 
 
-* For real-world images, run ``build_pixel_bankTTAD_real.py``
+* For real-world images, run ``TTAD_real.py``
 
 ## Acknowledgment
 This repository is based on the official implementation of ["Neighbor2Neighbor"](https://github.com/TaoHuang2018/Neighbor2Neighbor). We thank the authors for releasing the code.
