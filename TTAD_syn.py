@@ -60,9 +60,9 @@ sim_image_files = sorted(sim_image_files)
 
 transform = transforms.Compose([transforms.ToTensor()])
 
-if noise_type=='gauss' and noise_level==50:
+if args.nt=='gauss' and args.nl==50:
     max_epoch=100
-elif noise_type=='poiss' and noise_level==10:
+elif args.nt=='poiss' and args.nl==10:
     max_epoch=100
 else:
     max_epoch = 10
@@ -147,7 +147,7 @@ for image_file in image_files:
 
     noisy_img = torch.from_numpy(img_bank[:1].transpose(0, 3, 1, 2))
 
-    if noise_type=='gauss' and noise_level==10:
+    if args.nt=='gauss' and args.nl==10:
         args.banknum=2
     else:
         args.banknum = 10
