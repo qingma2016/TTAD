@@ -164,7 +164,7 @@ for image_file in image_files:
     model.load_state_dict(checkpoint, strict=True)
     model = model.to(device)
     optimizer = optim.Adam(model.parameters(), lr=lr)
-    scheduler = MultiStepLR(optimizer, milestones=[5], gamma=1)
+    scheduler = MultiStepLR(optimizer, milestones=[5,7], gamma=0.1)
 
     for epoch in range(max_epoch):
         train(model, optimizer, img_bank)
